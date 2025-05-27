@@ -8,8 +8,13 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
+      meta: {
+        title: 'Todo List',
+      },
     },
   ],
 })
-
+router.beforeEach((to) => {
+  document.title = to.meta.title
+})
 export default router

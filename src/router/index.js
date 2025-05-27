@@ -20,6 +20,14 @@ const router = createRouter({
         title: 'Create Todo',
       },
     },
+    {
+      path: '/edit/:id',
+      name: 'edit-todo',
+      component: ()=> import('../views/EditTodoView.vue'),
+      meta: {
+        title: 'Create Todo',
+      },
+    },
   ],
 })
 router.beforeEach((to) => {

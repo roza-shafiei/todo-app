@@ -12,6 +12,14 @@ const router = createRouter({
         title: 'Todo List',
       },
     },
+    {
+      path: '/create',
+      name: 'create-todo',
+      component: ()=> import('../views/CreateTodoView.vue'),
+      meta: {
+        title: 'Create Todo',
+      },
+    },
   ],
 })
 router.beforeEach((to) => {
